@@ -45,27 +45,22 @@ function exibirInformacoes(dadosCEP) {
     console.log('========================\n');
 }
 
-// Função principal
 async function main() {
     console.log('🏠 Bem-vindo ao Consultor de CEP!');
     console.log('Digite "sair" para encerrar o programa\n');
 
     while (true) {
         try {
-            // Solicita o CEP ao usuário
             const cep = readlineSync.question('Digite o CEP (formato: 12345-678 ou 12345678): ');
             
-            // Verifica se o usuário quer sair
             if (cep.toLowerCase() === 'sair') {
                 console.log('👋 Obrigado por usar o Consultor de CEP!');
                 break;
             }
 
-            // Busca e exibe as informações do CEP
             const dadosCEP = await buscarCEP(cep);
             exibirInformacoes(dadosCEP);
 
-            // Pergunta se quer continuar
             const continuar = readlineSync.question('Deseja consultar outro CEP? (s/n): ');
             if (continuar.toLowerCase() !== 's' && continuar.toLowerCase() !== 'sim') {
                 console.log('👋 Obrigado por usar o Consultor de CEP!');
@@ -79,7 +74,6 @@ async function main() {
     }
 }
 
-// Executa o programa
 main().catch(error => {
     console.error('❌ Erro inesperado:', error.message);
     process.exit(1);
