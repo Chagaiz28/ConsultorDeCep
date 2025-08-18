@@ -52,14 +52,25 @@ async function main() {
 
     while (true) {
         try {
-            const cep = readlineSync.question('Digite o CEP (formato: 12345-678 ou 12345678): ');
-            
-            if (cep.toLowerCase() === 'sair') {
+
+
+
+
+            const entrada = readlineSync.question('Digite o CEP (formato: 12345-678 ou 12345678) ou "data" para ver a data/hora: ');
+
+            if (entrada.toLowerCase() === 'sair') {
                 console.log('👋 Obrigado por usar o Consultor de CEP!');
                 break;
             }
 
-            const dadosCEP = await buscarCEP(cep);
+            if (entrada.toLowerCase() === 'data') {
+                const agora = new Date();
+                console.log(`🕒 Data e hora atual: ${agora.toLocaleString()}`);
+                console.log('');
+                continue;
+            }
+
+            const dadosCEP = await buscarCEP(entrada);
             exibirInformacoes(dadosCEP);
 
             const continuar = readlineSync.question('Deseja consultar outro CEP? (s/n): ');
