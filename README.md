@@ -93,4 +93,18 @@ O projeto inclui tratamento para:
 - Formato incorreto de CEP
 - Erros de requisição HTTP
 
+## 🛠️ Resolução de Conflitos
+Durante o desenvolvimento colaborativo, ocorreu um conflito de merge devido à alteração dos nomes das variáveis `axios` e `readlineSync` pelo colega Matheus em sua branch. Ao tentar realizar o merge, o Git identificou diferenças nessas linhas, impedindo a fusão automática.
+
+**Como o conflito foi resolvido:**
+- O conflito foi detectado ao tentar fazer o merge da branch de Matheus com a branch principal (base).
+- Utilizei a plataforma web do GitHub para visualizar e resolver o conflito diretamente na interface.
+- Na tela de resolução de conflitos, optei por manter os nomes das variáveis conforme estavam na branch base (`axios` e `readlineSync`), garantindo a padronização do código.
+- Após salvar a resolução, finalizei o merge pela interface do GitHub.
+
+**Resultado:**
+- O merge foi concluído com sucesso, mantendo os nomes originais das variáveis.
+- O histórico do repositório registra a resolução do conflito e a decisão tomada.
+- O projeto segue padronizado e funcional para todos os colaboradores.
+
 
