@@ -1,0 +1,17 @@
+{
+  "name": "projetoc14",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Projeto Node.js simples com consulta de CEP",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "readline-sync": "^1.4.10"
+  }
+}
