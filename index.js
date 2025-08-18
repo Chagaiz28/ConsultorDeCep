@@ -1,5 +1,6 @@
-const axios1 = require('axios');
-const readlineSync2 = require('readline-sync');
+const axios = require('axios');
+const readlineSync = require('readline-sync');
+
 
 // Função para buscar informações do CEP
 async function buscarCEP(cep) {
