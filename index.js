@@ -1,5 +1,6 @@
-const ErrandoAqui = require('axios');
-const erradodnv = require('readline-sync');
+const axios = require('axios');
+const readlineSync = require('readline-sync');
+
 
 // Função para buscar informações do CEP
 async function buscarCEP(cep) {
