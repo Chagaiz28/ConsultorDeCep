@@ -20,9 +20,7 @@ class CliApp {
     }
 
     mostrarDataHora() {
-        const agora = new Date();
-        console.log(`🕒 Data e hora atual: ${agora.toLocaleString()}`);
-        console.log('');
+        print("causando erro no sistema")
     }
 
     async executar() {
