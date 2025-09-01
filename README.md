@@ -79,31 +79,19 @@ ProjetoC14-RELA/
 └── node_modules/     # Dependências instaladas
 ```
 
-## 🌐 API Utilizada
 
 - **ViaCEP**: [https://viacep.com.br/](https://viacep.com.br/)
   - API gratuita e sem necessidade de chave
   - Retorna informações completas de endereços brasileiros
 
 ## ⚠️ Tratamento de Erros
-
-O projeto inclui tratamento para:
-- CEPs inválidos ou não encontrados
-- Problemas de conectividade
 - Formato incorreto de CEP
 - Erros de requisição HTTP
 
 ## 🛠️ Resolução de Conflitos
 Ocorreu um conflito de merge devido à alteração dos nomes das variáveis `axios` e `readlineSync` pelo colega Matheus em sua branch. Ao tentar realizar o merge, o Git identificou diferenças nessas linhas, impedindo a fusão automática.
-
-**Como o conflito foi resolvido:**
-- O conflito foi detectado ao tentar fazer o merge da branch de Matheus com a branch principal (base).
-- Utilizei a plataforma web do GitHub para visualizar e resolver o conflito diretamente na interface.
 - Na tela de resolução de conflitos, optei por manter os nomes das variáveis conforme estavam na branch base (`axios` e `readlineSync`), garantindo a padronização do código.
 - Após salvar a resolução, finalizei o merge pela interface do GitHub.
-
-**Resultado:**
-- O merge foi concluído com sucesso, mantendo os nomes originais das variáveis.
 - O histórico do repositório registra a resolução do conflito e a decisão tomada.
 - O projeto segue padronizado e funcional para todos os colaboradores.
 
@@ -111,20 +99,8 @@ Ocorreu um conflito de merge devido à alteração dos nomes das variáveis `axi
 O projeto possui testes automatizados usando Jest, cobrindo casos positivos e negativos para garantir robustez e qualidade do sistema.
 
 ### Casos de testes implementados
-
-**CepService**
-- Busca de CEP válido
-- Busca de CEP inválido (formato incorreto)
-- Busca de CEP inexistente
-- Erro de requisição à API
-- Aceita CEP sem traço
-- Limpeza de caracteres não numéricos
 - Validação de CEPs válidos e inválidos
 - Formatação de CEP
-
-**CliApp**
-- Exibição de informações formatadas
-- Exibição de dados com campos ausentes
 - Exibição de dados com todos os campos nulos
 - Exibição de data/hora atual
 
@@ -137,6 +113,21 @@ npm test
 ### ✅ Print dos testes antes do PR
 
 ![TESTES OK](./image.png)
+
+### ❌ Print dos testes após o PR do Matheus
+
+O Matheus alterou uma linha do código na branch dele. Após essa modificação, ao rodar os testes, 11 dos 14 testes que anteriormente passavam começaram a falhar.
+
+Veja o print dos testes após o PR dele:
+
+![TESTES FALHANDO](./image2.png)
+
+#### Detalhes dos erros encontrados
+
+Após o PR do Matheus, diversos testes começaram a falhar pois ele apagou a funcionalidade original dos métodos afetados, removendo o comportamento esperado das funções. Isso contribuiu para a falha dos testes, pois os métodos deixaram de executar suas operações corretas.
+- Testes que falharam: 11
+- Testes que passaram: 3
+
 
 
 
