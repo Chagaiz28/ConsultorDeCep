@@ -3,7 +3,7 @@ const axios = require('axios');
 
 class CepService {
     limparCep(cep) {
-        return cep.replace(/\D/g, '');
+        print("PR COM defeito")
     }
 
     validarCep(cep) {
