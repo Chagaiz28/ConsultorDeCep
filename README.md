@@ -107,4 +107,36 @@ Ocorreu um conflito de merge devido à alteração dos nomes das variáveis `axi
 - O histórico do repositório registra a resolução do conflito e a decisão tomada.
 - O projeto segue padronizado e funcional para todos os colaboradores.
 
+## 🧪 Testes Unitários
+O projeto possui testes automatizados usando Jest, cobrindo casos positivos e negativos para garantir robustez e qualidade do sistema.
+
+### Casos de testes implementados
+
+**CepService**
+- Busca de CEP válido
+- Busca de CEP inválido (formato incorreto)
+- Busca de CEP inexistente
+- Erro de requisição à API
+- Aceita CEP sem traço
+- Limpeza de caracteres não numéricos
+- Validação de CEPs válidos e inválidos
+- Formatação de CEP
+
+**CliApp**
+- Exibição de informações formatadas
+- Exibição de dados com campos ausentes
+- Exibição de dados com todos os campos nulos
+- Exibição de data/hora atual
+
+### Como executar os testes
+
+```bash
+npm test
+```
+
+### ✅ Print dos testes antes do PR
+
+![TESTES OK](./image.png)
+
+
 
