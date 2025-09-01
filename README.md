@@ -94,7 +94,7 @@ O projeto inclui tratamento para:
 - Erros de requisição HTTP
 
 ## 🛠️ Resolução de Conflitos
-Durante o desenvolvimento colaborativo, ocorreu um conflito de merge devido à alteração dos nomes das variáveis `axios` e `readlineSync` pelo colega Matheus em sua branch. Ao tentar realizar o merge, o Git identificou diferenças nessas linhas, impedindo a fusão automática.
+Ocorreu um conflito de merge devido à alteração dos nomes das variáveis `axios` e `readlineSync` pelo colega Matheus em sua branch. Ao tentar realizar o merge, o Git identificou diferenças nessas linhas, impedindo a fusão automática.
 
 **Como o conflito foi resolvido:**
 - O conflito foi detectado ao tentar fazer o merge da branch de Matheus com a branch principal (base).
